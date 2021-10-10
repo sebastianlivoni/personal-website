@@ -52,8 +52,8 @@ export default class ToggleDarkMode extends Component {
                 offHandleColor={"#fff"}
                 onColor={"#fff"}
                 offColor={"#1f2937"}
-                checkedIcon={<div className="text-center pt-1">🌞</div>}
-                uncheckedIcon={<div className="text-center pt-1">🌛</div>}
+                checkedIcon={<div className="text-center pt-1.5 text-sm">🌞</div>}
+                uncheckedIcon={<div className="text-center pt-1.5 text-sm">🌛</div>}
                 handleDiameter={24}
                 height={32}
         />
