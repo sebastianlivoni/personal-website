@@ -8,7 +8,7 @@ function App() {
     <>
       <div className="font-poppins bg-gray-200 dark:bg-custom-dark-blue transition pb-12 md:pb-0">
         <div> {/* This div is for sticky navbar to not overflow with other content */}
-          <Nav />
+          <Nav sticky={true} />
           <div className="flex justify-center items-center h-screen tracking-wide">
             <img src={colorful} className="absolute inset-x-0 mx-auto z-0" alt="background-gradient" /> {/* animate-spin-slow */}
             <div className="max-w-sm sm:max-w-lg lg:max-w-xl mx-12 z-30">

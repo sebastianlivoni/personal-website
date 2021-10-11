@@ -1,8 +1,9 @@
 export default function TimeLine() {
   return (
     <>
+      <h1 className="text-center text-3xl font-bold">My Short Resume & Journey</h1>
       <div className="container mx-auto w-full h-full">
-        <div className="relative wrap overflow-hidden p-8 h-full">
+        <div className="relative wrap overflow-hidden pt-8 h-full">
           <h1 className="text-center">Education</h1>
           <div className="border-2-2 absolute border-opacity-20 border-gray-700 h-full border" style={{left: "50%"}}></div>
           <div className="mb-8 flex justify-between items-center w-full right-timeline">
