@@ -2,7 +2,6 @@ import Nav from './components/navigation/nav';
 import colorful from './images/colorful.png'
 import Contact from './components/contact';
 import Footer from './components/footer';
-import NavMobile from './components/navigation/nav_mobile'
 
 function App() {
   return (
@@ -22,7 +21,6 @@ function App() {
         <Contact />
         <Footer />
       </div>
-      <NavMobile />
     </>
   );
 }
