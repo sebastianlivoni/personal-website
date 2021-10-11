@@ -1,6 +1,8 @@
 import Nav from './components/navigation/nav';
 import ToggleDarkMode from './components/darkModeToggle';
 import colorful from './images/colorful.png'
+import Contact from './components/contact';
+import Footer from './components/footer';
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
           </div>
         </div>
         <ToggleDarkMode />
+        <Contact />
+        <Footer />
       </div>
     </>
   );
