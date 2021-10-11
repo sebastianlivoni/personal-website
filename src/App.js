@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <div className="font-poppins bg-gray-200 dark:bg-custom-dark-blue transition pb-12 md:pb-0">
-        <div className="items-start">
+        <div> {/* This div is for sticky navbar to not overflow with other content */}
           <Nav />
           <div className="flex justify-center items-center h-screen tracking-wide">
             <img src={colorful} className="absolute inset-x-0 mx-auto z-0" alt="background-gradient" /> {/* animate-spin-slow */}
