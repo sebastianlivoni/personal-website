@@ -1,13 +1,13 @@
 import Nav from './components/navigation/nav';
-import ToggleDarkMode from './components/darkModeToggle';
 import colorful from './images/colorful.png'
 import Contact from './components/contact';
 import Footer from './components/footer';
+import NavMobile from './components/navigation/nav_mobile'
 
 function App() {
   return (
     <>
-      <div className="font-poppins bg-gray-200 dark:bg-custom-dark-blue transition">
+      <div className="font-poppins bg-gray-200 dark:bg-custom-dark-blue transition pb-12 md:pb-0">
         <Nav />
         <div className="flex justify-center items-center h-screen tracking-wide">
           <img src={colorful} className="absolute inset-x-0 mx-auto z-0" alt="background-gradient" /> {/* animate-spin-slow */}
@@ -16,10 +16,11 @@ function App() {
             <h5 className="text-md lg:text-xl font-light text-gray-700 dark:text-white">I'm Sebastian, a 20 year old upcoming full stack developer with a deep desire to develop in C and React. Explore my webpage to learn more about my journey.</h5>
           </div>
         </div>
-        <ToggleDarkMode />
+        
         <Contact />
         <Footer />
       </div>
+      <NavMobile />
     </>
   );
 }

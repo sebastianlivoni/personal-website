@@ -44,7 +44,7 @@ export default class ToggleDarkMode extends Component {
 
   render() {
     return (
-      <div className="md:fixed md:bottom-10 md:left-10">
+      <div>
         <Switch
                 onChange={this.handleChange}
                 checked={this.state.dark}
