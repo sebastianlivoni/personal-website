@@ -4,7 +4,7 @@ import logo from '../../images/profile_pb.png'
 export default function Nav() {
 
   return (
-    <nav className="fixed top-0 inset-x-0 text-black text-sm dark:text-white z-40 tracking-wide">
+    <nav className="sticky top-0 inset-x-0 text-black text-sm dark:text-white z-40 tracking-wide">
       <div className="max-w-6xl mx-auto px-8 py-1">
         <div className="flex justify-between my-2 md:my-0">
           <div className="flex space-x-4">
