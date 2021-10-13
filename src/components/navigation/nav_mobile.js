@@ -2,6 +2,13 @@ import { IoMdCloseCircle, IoLogoLinkedin, IoMdSearch } from 'react-icons/io'
 import { MdEmail } from 'react-icons/md'
 import { FaTwitterSquare } from 'react-icons/fa'
 import React, { useState } from 'react'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  NavLink
+} from "react-router-dom";
 
 export default function NavMobile() {
 
@@ -52,9 +59,10 @@ export default function NavMobile() {
             <div>
               <div className="my-8 mx-8 font-bold text-xl overflow-x-auto">
                 <div className="flex justify-center">
-                  <a href="/" className="mx-4">About</a>
-                  <a href="/" className="mx-4">Contact</a>
-                  <a href="/" className="mx-4">Blog</a>
+                  <Link to="/" className="mx-4">Home</Link>
+                  <Link to="/about" className="mx-4">About</Link>
+                  <a href="#contact" className="mx-4">Contact</a>
+                  {/*<a href="/" className="mx-4">Blog</a>*/}
                 </div>
               </div>
             </div>

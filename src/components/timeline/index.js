@@ -8,8 +8,8 @@ export default function TimeLine() {
           <div className="border-2-2 absolute border-opacity-20 border-gray-700 h-full border" style={{left: "50%"}}></div>
           <div className="mb-8 flex justify-between items-center w-full right-timeline">
             <div className="order-1 w-5/12"></div>
-            <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-32 h-8 rounded-full">
-              <h1 className="mx-auto font-semibold text-lg text-white">2007-2017</h1>
+            <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-20 lg:w-32 h-8 rounded-full">
+              <h1 className="mx-auto font-semibold text-xs lg:text-lg text-white">2007-2017</h1>
             </div>
             <div className="order-1 bg-custom-dark-gray-2 rounded-xl shadow-xl w-5/12 px-6 py-4">
               <h3 className="mb-3 font-bold text-white text-xl">Primary school</h3>
@@ -19,8 +19,8 @@ export default function TimeLine() {
 
           <div className="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
             <div className="order-1 w-5/12"></div>
-            <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-32 h-8 rounded-full">
-              <h1 className="mx-auto text-white font-semibold text-lg">2017-2018</h1>
+            <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-20 lg:w-32 h-8 rounded-full">
+              <h1 className="mx-auto text-white font-semibold text-xs lg:text-lg">2017-2018</h1>
             </div>
             <div className="order-1 bg-red-400 rounded-xl shadow-xl w-5/12 px-6 py-4">
               <h3 className="mb-3 font-bold text-white text-xl">Ingstrup Efterskole (Continuation School)</h3>
@@ -30,8 +30,8 @@ export default function TimeLine() {
 
           <div className="mb-8 flex justify-between items-center w-full right-timeline">
             <div className="order-1 w-5/12"></div>
-            <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-32 h-8 rounded-full">
-              <h1 className="mx-auto font-semibold text-lg text-white">2018-2021</h1>
+            <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-20 lg:w-32 h-8 rounded-full">
+              <h1 className="mx-auto font-semibold text-xs lg:text-xl text-white">2018-2021</h1>
             </div>
             <div className="order-1 bg-custom-dark-gray-2 rounded-xl shadow-xl w-5/12 px-6 py-4">
               <h3 className="mb-3 font-bold text-white text-xl">Aalborg Business College, Turøgade</h3>
@@ -41,8 +41,8 @@ export default function TimeLine() {
 
           <div className="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
             <div className="order-1 w-5/12"></div>
-            <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-32 h-8 rounded-full">
-              <h1 className="mx-auto text-white font-semibold text-lg">2021-2026</h1>
+            <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-20 lg:w-32 h-8 rounded-full">
+              <h1 className="mx-auto text-white font-semibold text-xs lg:text-lg">2021-2026</h1>
             </div>
             <div className="order-1 bg-red-400 rounded-xl shadow-xl w-5/12 px-6 py-4">
               <h3 className="mb-3 font-bold text-white text-xl">Computer Science at Aalborg University</h3>
@@ -56,7 +56,7 @@ export default function TimeLine() {
           <div className="border-2-2 absolute border-opacity-20 border-gray-700 h-full border" style={{left: "50%"}}></div>
           {/*<div className="mb-8 flex justify-between items-center w-full right-timeline">
             <div className="order-1 w-5/12"></div>
-            <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-32 h-8 rounded-full">
+            <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-20 lg:w-32 h-8 rounded-full">
               <h1 className="mx-auto font-semibold text-lg text-white">2007-2017</h1>
             </div>
             <div className="order-1 bg-custom-dark-gray-2 rounded-xl shadow-xl w-5/12 px-6 py-4">
@@ -68,8 +68,8 @@ export default function TimeLine() {
 
           <div className="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
             <div className="order-1 w-5/12"></div>
-            <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-32 h-8 rounded-full">
-              <h1 className="mx-auto text-white font-semibold text-lg">xxxx-xxxx</h1>
+            <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-20 lg:w-32 h-8 rounded-full">
+              <h1 className="mx-auto text-white font-semibold text-xs lg:text-lg">xxxx-xxxx</h1>
             </div>
             <div className="order-1 bg-red-400 rounded-xl shadow-xl w-5/12 px-6 py-4">
               <h3 className="mb-3 font-bold text-white bg-custom-gradient-start text-xl w-full h-6 rounded-md"></h3>
