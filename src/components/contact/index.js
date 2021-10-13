@@ -36,6 +36,7 @@ export default function Contact() {
     )
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
+        localStorage.setItem('form-sent', true);
         setShowSuccess(true);
       })
       .catch((err) => {
@@ -47,6 +48,8 @@ export default function Contact() {
     setToSend({ ...toSend, [e.target.name]: e.target.value });
   };
 
+  console.log(localStorage.getItem('form-sent') === 'true')
+
   return (
     <>
       <div className="max-w-6xl mx-auto" id="contact-form">
@@ -55,7 +58,7 @@ export default function Contact() {
             <h2 className="text-3xl font-semibold md:text-4xl lg:text-5xl lg:ml-12 dark:text-white">Want to get in touch?</h2>
           </div>
           <div className="flex-1 mt-10 lg:mt-0">
-            {!showSuccess ? 
+            {!showSuccess && localStorage.getItem('form-sent') !== 'true' ? 
               <>
                 <form className="w-full lg:max-w-md" onSubmit={onSubmit}>
                   <div className="md:flex -ml-3 mb-6 mr-3 md:mr-0">
@@ -85,7 +88,7 @@ export default function Contact() {
                 </form>
               </> :
               <>
-                <h1>Thank you for your message</h1>
+                <h1 className="-ml-3 dark:text-white">Thanks! I have now recieved your message. I will contact you as soon as possible. Until then, have a nice one!</h1>
               </>
             }
           </div>
