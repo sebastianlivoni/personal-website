@@ -27,7 +27,7 @@ export default function Nav(props) {
               <a href="#contact-form" className="pr-3 hover:text-gray-700 dark:hover:text-gray-300">Contact</a>
               <NavLink to="/" className="px-3.5 py-2 bg-black rounded text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200">View Work</NavLink>
             </div>
-            <div className="flex items-center cursor-pointer md:fixed md:bottom-10 md:left-10">
+            <div className="flex items-center cursor-pointer md:fixed md:bottom-10 md:left-10 z-30">
               <ToggleDarkMode />
             </div>
           </div>

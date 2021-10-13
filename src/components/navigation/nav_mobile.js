@@ -19,7 +19,7 @@ export default function NavMobile() {
 
   return (
     <>
-      <div onClick={Toggle} className="md:hidden toggle-mobile mx-auto w-40 fixed inset-x-0 bottom-7 bg-gradient-to-r from-custom-gradient-start to-custom-gradient-end rounded-3xl text-white text-md text-center shadow-xl cursor-pointer">
+      <div onClick={Toggle} className="md:hidden toggle-mobile mx-auto w-40 fixed inset-x-0 bottom-7 bg-gradient-to-r from-custom-gradient-start to-custom-gradient-end rounded-3xl text-white text-md text-center shadow-xl cursor-pointer z-30">
         <div className="flex py-2 justify-center">
           <svg className="stroke-current mt-1 mr-3 text-white" width="22px" height="18px" viewBox="0 0 22 18" version="1.1" xmlns="http://www.w3.org/2000/svg">
             <g id="Page-1" strokeWidth="1" fill="none" fillRule="evenodd" strokeLinecap="square">
