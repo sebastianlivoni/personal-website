@@ -1,4 +1,34 @@
+import { useState } from 'react';
+import { send } from 'emailjs-com';
+
 export default function Contact() {
+
+  const [toSend, setToSend] = useState({
+    from_name: '',
+    message: '',
+    reply_to: '',
+  });
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    send(
+      'service_cysj1rb',
+      'template_5mswnb5',
+      toSend,
+      'user_MlZ1fY31hZ5ieRtwmxPyN'
+    )
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+      })
+      .catch((err) => {
+        console.log('FAILED...', err);
+      });
+  };
+
+  const handleChange = (e) => {
+    setToSend({ ...toSend, [e.target.name]: e.target.value });
+  };
+
   return (
     <>
       <div className="max-w-6xl mx-auto" id="contact-form">
@@ -7,13 +37,13 @@ export default function Contact() {
             <h2 className="text-3xl font-semibold md:text-4xl lg:text-5xl lg:ml-12 dark:text-white">Want to get in touch?</h2>
           </div>
           <div className="flex-1 mt-10 lg:mt-0">
-            <form className="w-full lg:max-w-md">
+            <form className="w-full lg:max-w-md" onSubmit={onSubmit}>
               <div className="md:flex -ml-3 mb-6 mr-3 md:mr-0">
                 <div className="md:w-1/2 md:mr-3 mb-6 md:mb-0">
                   <label className="block uppercase tracking-wide text-gray-700 dark:text-white text-xs font-bold mb-2" htmlFor="grid-first-name">
                     First & Last Name
                   </label>
-                  <input className="appearance-none block w-full bg-gray-200 dark:bg-custom-dark-black  dark:border-transparent text-gray-700 dark:text-custom-light-gray dark:placeholder-custom-light-gray rounded py-3 px-4 mb-3 leading-tight focus:outline-none" id="grid-name" type="text" placeholder="Enter your name" />
+                  <input name='from_name' value={toSend.from_name} onChange={handleChange} className="appearance-none block w-full bg-gray-200 dark:bg-custom-dark-black  dark:border-transparent text-gray-700 dark:text-custom-light-gray dark:placeholder-custom-light-gray rounded py-3 px-4 mb-3 leading-tight focus:outline-none" id="grid-name" type="text" placeholder="Enter your name" />
                   {/*border-red-500*/}
                   {/*<p className="text-red-500 text-xs italic">Please fill out this field.</p>*/}
                 </div>
@@ -21,20 +51,52 @@ export default function Contact() {
                   <label className="block uppercase tracking-wide text-gray-700 dark:text-white text-xs font-bold mb-2" htmlFor="grid-email">
                     Email Adress
                   </label>
-                  <input className="appearance-none block w-full bg-gray-200 dark:bg-custom-dark-black dark:border-transparent text-gray-700 dark:text-custom-light-gray dark:placeholder-custom-light-gray rounded py-3 px-4 leading-tight focus:outline-none" id="grid-email" type="email" placeholder="Enter your email" />
+                  <input name='reply_to' value={toSend.reply_to} onChange={handleChange} className="appearance-none block w-full bg-gray-200 dark:bg-custom-dark-black dark:border-transparent text-gray-700 dark:text-custom-light-gray dark:placeholder-custom-light-gray rounded py-3 px-4 leading-tight focus:outline-none" id="grid-email" type="email" placeholder="Enter your email" />
                 </div>
               </div>
               <div className="-ml-3 mb-8 mr-3 md:mr-0">
                 <label className="block uppercase tracking-wide text-gray-700 dark:text-white text-xs font-bold mb-2" htmlFor="grid-message">
                   Message
                 </label>
-                <textarea className="appearance-none block w-full bg-gray-200 dark:bg-custom-dark-black dark:border-transparent text-gray-700 dark:text-custom-light-gray dark:placeholder-custom-light-gray rounded py-3 px-4 leading-tight focus:outline-none" id="grid-message" type="text" rows="5" placeholder="Enter your message"></textarea>
+                <textarea name='message' value={toSend.message} onChange={handleChange} className="appearance-none block w-full bg-gray-200 dark:bg-custom-dark-black dark:border-transparent text-gray-700 dark:text-custom-light-gray dark:placeholder-custom-light-gray rounded py-3 px-4 leading-tight focus:outline-none" id="grid-message" type="text" rows="5" placeholder="Enter your message"></textarea>
               </div>
-              <a href="/" className="-ml-3 px-8 py-3 bg-black dark:bg-gray-200 rounded-md duration-300 text-white hover:bg-gray-800 dark:text-black dark:hover:bg-gray-200">Submit</a>
+              <button type='submit' className="-ml-3 px-8 py-3 bg-black dark:bg-gray-200 rounded-md duration-300 text-white hover:bg-gray-800 dark:text-black dark:hover:bg-gray-200">Submit</button>
             </form>
+            {}
           </div>
         </div>
       </div>
+      <form className="mt-16" onSubmit={onSubmit}>
+        <input
+          type='text'
+          name='from_name'
+          placeholder='from name'
+          value={toSend.from_name}
+          onChange={handleChange}
+        />
+        <input
+          type='text'
+          name='to_name'
+          placeholder='to name'
+          value={toSend.to_name}
+          onChange={handleChange}
+        />
+        <input
+          type='text'
+          name='message'
+          placeholder='Your message'
+          value={toSend.message}
+          onChange={handleChange}
+        />
+        <input
+          type='text'
+          name='reply_to'
+          placeholder='Your email'
+          value={toSend.reply_to}
+          onChange={handleChange}
+        />
+        <button type='submit'>Submit</button>
+      </form>
     </>
   )
 }
