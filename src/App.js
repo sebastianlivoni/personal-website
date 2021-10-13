@@ -2,6 +2,7 @@ import Nav from './components/navigation/nav';
 import colorful from './images/colorful.png'
 import Contact from './components/contact';
 import Footer from './components/footer';
+import { Arrow } from './components/minor/arrow';
 
 function App() {
   return (

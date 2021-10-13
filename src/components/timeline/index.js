@@ -54,7 +54,7 @@ export default function TimeLine() {
         <div className="relative wrap overflow-hidden pt-8 h-full">
           <h1 className="text-center mb-8 font-bold text-xl">Experience</h1>
           <div className="border-2-2 absolute border-opacity-20 border-gray-700 h-full border" style={{left: "50%"}}></div>
-          <div className="mb-8 flex justify-between items-center w-full right-timeline">
+          {/*<div className="mb-8 flex justify-between items-center w-full right-timeline">
             <div className="order-1 w-5/12"></div>
             <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-32 h-8 rounded-full">
               <h1 className="mx-auto font-semibold text-lg text-white">2007-2017</h1>
@@ -64,16 +64,16 @@ export default function TimeLine() {
               <p className="text-sm leading-snug tracking-wide bg-custom-dark-blue text-opacity-100 h-6 w-full"></p>
               <p className="text-sm leading-snug tracking-wide bg-custom-dark-blue text-opacity-100 h-6 w-full"></p>
             </div>
-          </div>
+          </div>*/}
 
           <div className="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
             <div className="order-1 w-5/12"></div>
             <div className="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-32 h-8 rounded-full">
-              <h1 className="mx-auto text-white font-semibold text-lg">2017-2018</h1>
+              <h1 className="mx-auto text-white font-semibold text-lg">xxxx-xxxx</h1>
             </div>
             <div className="order-1 bg-red-400 rounded-xl shadow-xl w-5/12 px-6 py-4">
-              <h3 className="mb-3 font-bold text-white bg-custom-gradient-start text-xl w-full h-6"></h3>
-              <p className="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100 bg-custom-gradient-start h-20 w-full"></p>
+              <h3 className="mb-3 font-bold text-white bg-custom-gradient-start text-xl w-full h-6 rounded-md"></h3>
+              <p className="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100 bg-custom-gradient-start h-20 w-full rounded-md"></p>
             </div>
           </div>
           
