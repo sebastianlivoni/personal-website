@@ -88,7 +88,7 @@ export default function Contact() {
                 </form>
               </> :
               <>
-                <h1 className="-ml-3 dark:text-white">Thanks! I have now recieved your message. I will contact you as soon as possible. Until then, have a nice one!</h1>
+                <h1 className="-ml-3 dark:text-white">Thanks! I have recieved your message. I will contact you as soon as possible. Until then, have a nice one!</h1>
               </>
             }
           </div>
