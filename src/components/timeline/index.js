@@ -72,7 +72,7 @@ export default function TimeLine() {
               <h1 className="mx-auto text-white font-semibold text-xs lg:text-lg">xxxx-xxxx</h1>
             </div>
             <div className="order-1 bg-red-400 rounded-xl shadow-xl w-4/12 lg:w-5/12 px-6 py-4">
-              <h3 className="mb-3 font-bold text-white bg-custom-gradient-start text-xl w-full h-6 rounded-md"></h3>
+              <div className="mb-3 font-bold text-white bg-custom-gradient-start text-xl w-full h-6 rounded-md"></div> {/* Replace til h3 */}
               <p className="text-xs lg:text-sm font-medium leading-snug tracking-wide text-white text-opacity-100 bg-custom-gradient-start h-20 w-full rounded-md"></p>
             </div>
           </div>

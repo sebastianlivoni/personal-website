@@ -4,7 +4,6 @@ import Nav from '../components/navigation/nav';
 import TimeLine from '../components/timeline';
 import AboutMe from '../components/about';
 import Skills from '../components/skills';
-import { Arrow } from '../components/minor/arrow';
 
 export default function AboutPage() {
   return (

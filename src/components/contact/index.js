@@ -15,15 +15,15 @@ export default function Contact() {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    if (toSend.message == '') {
+    if (toSend.message === '') {
       setMessage("Please type a message!");
       return -1;
     }
-    if (toSend.from_name == '') {
+    if (toSend.from_name === '') {
       setMessage("Please type your name!");
       return -1;
     }
-    if (toSend.reply_to == '') {
+    if (toSend.reply_to === '') {
       setMessage("Please type your email!");
       return -1;
     }
@@ -47,8 +47,6 @@ export default function Contact() {
   const handleChange = (e) => {
     setToSend({ ...toSend, [e.target.name]: e.target.value });
   };
-
-  console.log(localStorage.getItem('form-sent') === 'true')
 
   return (
     <>
@@ -96,8 +94,4 @@ export default function Contact() {
       </div>
     </>
   )
-}
-
-const Form = () => {
-  
 }

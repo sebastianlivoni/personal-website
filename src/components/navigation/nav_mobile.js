@@ -2,13 +2,7 @@ import { IoMdCloseCircle, IoLogoLinkedin, IoMdSearch } from 'react-icons/io'
 import { MdEmail } from 'react-icons/md'
 import { FaTwitterSquare } from 'react-icons/fa'
 import React, { useState } from 'react'
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  NavLink
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function NavMobile() {
 

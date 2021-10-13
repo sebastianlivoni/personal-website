@@ -1,12 +1,6 @@
 import { FaGithub, FaFreeCodeCamp, FaLinkedin } from 'react-icons/fa';
 import logo from '../../images/profile_pb.png'
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  NavLink
-} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function Footer() {
   return (
