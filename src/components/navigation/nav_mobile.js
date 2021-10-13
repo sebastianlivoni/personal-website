@@ -42,7 +42,7 @@ export default function NavMobile() {
           <p>Quick Menu</p>
         </div>
       </div>
-      <div className="transition-all duration-500 overflow-hidden ease-in-out">
+      <div className="overflow-hidden">
         <div className={showMe ? "max-h-100 md:hidden nav-mobile fixed bottom-0 bg-white dark:bg-custom-dark-black dark:text-white w-full rounded-t-3xl shadow-2xl z-50" : "max-h-0 md:hidden nav-mobile fixed bottom-0 bg-white dark:bg-custom-dark-black dark:text-white w-full rounded-t-3xl shadow-2xl z-50"}>
           <div className="mx-auto max-w-xl divide-y">
             <div className="flex items-center font-bold py-8 mx-auto">
