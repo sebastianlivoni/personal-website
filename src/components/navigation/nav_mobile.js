@@ -61,7 +61,7 @@ export default function NavMobile() {
                 <div className="flex justify-center">
                   <Link to="/" className="mx-4">Home</Link>
                   <Link to="/about" className="mx-4">About</Link>
-                  <a href="#contact" className="mx-4">Contact</a>
+                  <a href="#contact-form" className="mx-4" onClick={Toggle}>Contact</a>
                   {/*<a href="/" className="mx-4">Blog</a>*/}
                 </div>
               </div>
