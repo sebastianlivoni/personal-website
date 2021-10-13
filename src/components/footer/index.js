@@ -14,11 +14,11 @@ export default function Footer() {
             </div>
             <div className="flex items-center space-x-1 font-medium">
               <div className="hidden md:block">
-                <a href="https://github.com/sebastianlivoni" target="_blank" rel="noreferrer" className="mr-3 hover:text-gray-700 dark:hover:text-gray-300">GitHub</a>
-                <a href="https://www.freecodecamp.org/livoni" target="_blank" rel="noreferrer" className="pr-3 hover:text-gray-700 dark:hover:text-gray-300">freeCodeCamp</a>
-                <a href="https://www.linkedin.com/in/livoni/" target="_blank" rel="noreferrer" className="pr-3 hover:text-gray-700 dark:hover:text-gray-300">LinkedIn</a>
-                <a href="/" className="pr-3 hover:text-gray-700 dark:hover:text-gray-300">About</a>
-                <a href="/" className="hover:text-gray-700 dark:hover:text-gray-300">Contact</a>
+                <a href="https://github.com/sebastianlivoni" target="_blank" rel="noreferrer" className="mr-3 text-transparent bg-clip-text bg-gradient-to-br from-black to-black dark:from-white dark:to-white dark:hover:from-pink-400 dark:hover:to-red-600">GitHub</a>
+                <a href="https://www.freecodecamp.org/livoni" target="_blank" rel="noreferrer" className="pr-3 text-transparent bg-clip-text bg-gradient-to-br from-black to-black dark:from-white dark:to-white dark:hover:from-pink-400 dark:hover:to-red-600">freeCodeCamp</a>
+                <a href="https://www.linkedin.com/in/livoni/" target="_blank" rel="noreferrer" className="pr-3 text-transparent bg-clip-text bg-gradient-to-br from-black to-black dark:from-white dark:to-white dark:hover:from-pink-400 dark:hover:to-red-600">LinkedIn</a>
+                <a href="/" className="pr-3 text-transparent bg-clip-text bg-gradient-to-br from-black to-black dark:from-white dark:to-white dark:hover:from-pink-400 dark:hover:to-red-600">About</a>
+                <a href="/" className="text-transparent bg-clip-text bg-gradient-to-br from-black to-black dark:from-white dark:to-white dark:hover:from-pink-400 dark:hover:to-red-600">Contact</a>
               </div>
               <div className="md:hidden flex text-lg">
                 <a href="https://github.com/sebastianlivoni" target="_blank" rel="noreferrer" className="mr-6 hover:text-gray-700 dark:hover:text-gray-300"><FaGithub /></a>
