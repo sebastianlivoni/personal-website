@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import Nav from './components/navigation/nav';
+import colorful from './images/colorful.png'
+import Contact from './components/contact';
+import Footer from './components/footer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="font-poppins bg-gray-200 dark:bg-custom-dark-blue transition pb-12 md:pb-0">
+        <div> {/* This div is for sticky navbar to not overflow with other content */}
+          <Nav sticky={true} />
+          <div className="flex justify-center items-center h-screen tracking-wide">
+            <img src={colorful} className="absolute inset-x-0 mx-auto z-0" alt="background-gradient" /> {/* animate-spin-slow */}
+            <div className="max-w-sm sm:max-w-lg lg:max-w-xl mx-12 z-30">
+              <h1 className="text-5xl md:text-8xl xl:text-9xl font-medium mb-3 dark:text-white">Hi there!</h1>
+              <h5 className="text-md lg:text-xl font-light text-gray-700 dark:text-white">I'm Sebastian, a 20 year old upcoming full stack developer with a deep desire to develop in C and React. Explore my webpage to learn more about my journey.</h5>
+            </div>
+          </div>
+        </div>
+        
+        <Contact />
+        <Footer />
+      </div>
+    </>
   );
 }
 
