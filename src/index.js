@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import AboutPage from './pages/About';
 import ScrollToTop from './components/scrollTop';
+import WorkPage from './pages/Work';
 import {
   BrowserRouter as Router,
   Switch,
@@ -18,6 +19,10 @@ ReactDOM.render(
         <Route path="/about">
           <ScrollToTop />
           <AboutPage />
+        </Route>
+        <Route path="/work">
+          <ScrollToTop />
+          <WorkPage />
         </Route>
         <Route path="/">
           <ScrollToTop />
