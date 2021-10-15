@@ -1,7 +1,5 @@
 import Footer from '../components/footer';
-import Contact from '../components/contact';
 import Nav from '../components/navigation/nav';
-import AboutMe from '../components/about';
 
 export default function WorkPage() {
   return (
