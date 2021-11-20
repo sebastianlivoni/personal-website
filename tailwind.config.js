@@ -1,6 +1,6 @@
 module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
-  darkMode: 'media', // or 'media' or 'class'
+  darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {
       fontFamily: {
@@ -34,6 +34,8 @@ module.exports = {
     extend: {
       fontWeight: ['hover', 'dark'],
       blur: ['hover', 'focus'],
+      rotate: ['active', 'group-hover'],
+      display: ['hover', 'focus', 'group-hover'],
     },
   },
   plugins: [],

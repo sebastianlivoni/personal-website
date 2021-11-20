@@ -15,7 +15,7 @@ import {
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
+    <Router className="transition ease-in-out">
       <Switch>
         <Route path="/about">
           <ScrollToTop />

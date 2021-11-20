@@ -14,10 +14,11 @@ export default class ToggleDarkMode extends Component {
     if (!localStorage.getItem('theme')) {
       if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         this.setState({dark: true});
-        localStorage.setItem('theme', "dark");
+        localStorage.setItem('theme', "system");
         root.classList.add("dark");
       } else {
         this.setState({dark: false});
+        localStorage.setItem('theme', "system");
       }
       console.log("Intet tema endnu!");
     } else if (localStorage.getItem('theme') === "dark") {
@@ -26,25 +27,36 @@ export default class ToggleDarkMode extends Component {
     } else if (localStorage.getItem('theme') === "light") {
       this.setState({dark: false});
       root.classList.remove("dark");
+    } else if (localStorage.getItem('theme') === "system") {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        this.setState({dark: true});
+        root.classList.add("dark");
+      } else {
+        this.setState({dark: false});
+        root.classList.remove("dark");
+      }
     }
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+      if (localStorage.getItem('theme') === "system") {
+        this.handleChange(e.matches);
+      }
+    });
   }
 
   handleChange(dark) {
     this.setState({ dark });
     const root = document.getElementById('root');
     if (dark === true) {
-      localStorage.setItem('theme', "dark");
       root.classList.add("dark");
-
     } else {
-      localStorage.setItem('theme', "light");
       root.classList.remove("dark");
     }
   }
 
   render() {
     return (
-      <div>
+      <div className="hidden">
         <Switch
                 onChange={this.handleChange}
                 checked={this.state.dark}

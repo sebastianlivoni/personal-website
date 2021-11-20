@@ -6,7 +6,7 @@ import Footer from './components/footer';
 function App() {
   return (
     <>
-      <div className="font-poppins bg-gray-200 dark:bg-custom-dark-blue transition pb-12 md:pb-0">
+      <div className="transition ease-in-out duration-300 font-poppins bg-gray-200 dark:bg-custom-dark-blue pb-12 md:pb-0">
         <div> {/* This div is for sticky navbar to not overflow with other content */}
           <Nav sticky={true} />
           <div className="flex justify-center items-center h-screen tracking-wide">
