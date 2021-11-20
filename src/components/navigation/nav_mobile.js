@@ -37,7 +37,7 @@ export default function NavMobile() {
           <p>Quick Menu</p>
         </div>
       </div>
-      <div className="fixed md:hidden right-10 top-8">
+      <div className="fixed md:hidden right-10 top-8 z-40">
         <Settings />
       </div>
       <div className="overflow-hidden">
