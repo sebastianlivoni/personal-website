@@ -7,6 +7,7 @@ import AboutPage from './pages/About';
 import ScrollToTop from './components/scrollTop';
 import WorkPage from './pages/Work';
 import ContactPage from './pages/Contact';
+import ToggleDarkMode from './components/darkModeToggle';
 import {
   BrowserRouter as Router,
   Switch,
@@ -35,6 +36,7 @@ ReactDOM.render(
         </Route>
       </Switch>
     </Router>
+    <ToggleDarkMode />
   </React.StrictMode>,
   document.getElementById('root')
 );

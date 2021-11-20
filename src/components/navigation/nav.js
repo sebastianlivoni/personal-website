@@ -2,16 +2,71 @@ import logo from '../../images/profile_pb.png'
 import NavMobile from './nav_mobile'
 import { Link, NavLink } from "react-router-dom";
 import { FiSettings } from 'react-icons/fi';
-import React, { useRef } from 'react'
+import React, { Component, useRef } from 'react'
 import { useDetectOutsideClick } from '../minor/UseDetectOutsideClick';
 import { HiOutlineDesktopComputer, HiSelector } from 'react-icons/hi';
 import { GrLanguage } from 'react-icons/gr';
+
+const theme_options = [
+  {
+    label: "System",
+    value: "system",
+  }, {
+    label: "Dark",
+    value: "dark",
+  }, {
+    label: "Light",
+    value: "light",
+  },
+];
+
+class ThemeSelect extends Component {
+  constructor(props) {
+    super(props);
+    if (localStorage.getItem('theme')) {
+      this.state = {
+        theme: localStorage.getItem('theme'),
+      };
+    } else {
+      this.state = {
+        theme: "system",
+      }
+    }
+
+    this.handleChange = this.handleChange.bind(this);
+  }
+  handleChange(e) {
+    localStorage.setItem('theme', e.target.value);
+    this.setState({ theme: e.target.value });
+    const root = document.getElementById('root');
+    if (e.target.value === "dark") {
+      root.classList.add("dark");
+    } else if (e.target.value === "light") {
+      root.classList.remove("dark");
+    } else if (e.target.value === "system" && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      root.classList.add("dark");
+    } else if (e.target.value === "system" && window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+      root.classList.remove("dark");
+    }
+  }
+  
+
+  render() {
+    return (
+      <select className="appearance-none bg-transparent relative w-32 pl-9 py-1.5 border border-gray-600 rounded outline-none" id="select-theme" value={this.state.theme} onChange={this.handleChange}>
+        {theme_options.map((option) => (
+          <option key={option.value} value={option.value}>{option.label}</option>
+        ))}
+      </select>
+    )
+  }
+}
 
 export default function Nav(props) {
   const dropdownRef = useRef(null);
   const [isActive, setIsActive] = useDetectOutsideClick(dropdownRef, false);
   /*const [showMe, setShowMe] = useState(false);*/
-  const onClick = () => setIsActive(!isActive)
+  const onClick = () => setIsActive(!isActive);
 
   return (
     <>
@@ -37,13 +92,9 @@ export default function Nav(props) {
                   </div>
                   <div className="flex-1">
                     <div className="select-wrap flex items-center py-1 px-1 relative">
-                      <label for="select-theme"><HiOutlineDesktopComputer className="absolute text-lg bottom-3 left-4 pointer-events-none" /></label>
-                      <select className="appearance-none bg-transparent relative w-32 pl-9 py-1.5 border border-gray-600 rounded outline-none" id="select-theme">
-                        <option value="system">System</option>
-                        <option value="dark">Dark</option>
-                        <option value="light">Light</option>
-                      </select>
-                      <label for="select-theme"><HiSelector className="absolute text-lg bottom-3 right-4 pointer-events-none" /></label>
+                      <label htmlFor="select-theme"><HiOutlineDesktopComputer className="absolute text-lg bottom-3 left-4 pointer-events-none" /></label>
+                      <ThemeSelect />
+                      <label htmlFor="select-theme"><HiSelector className="absolute text-lg bottom-3 right-4 pointer-events-none" /></label>
                     </div>
                   </div>
                 </div>
@@ -53,13 +104,13 @@ export default function Nav(props) {
                   </div>
                   <div className="flex-1">
                     <div className="select-wrap flex items-center py-1 px-1 relative">
-                      <label for="select-theme"><GrLanguage className="absolute text-lg bottom-3 left-4 pointer-events-none" /></label>
+                      <label htmlFor="select-theme"><GrLanguage className="absolute text-lg bottom-3 left-4 pointer-events-none" /></label>
                       <select className="appearance-none bg-transparent relative w-32 pl-9 py-1.5 border border-gray-600 rounded outline-none" id="select-theme">
                         <option value="english">English</option>
                         <option value="danish">Danish</option>
                         <option value="german">German</option>
                       </select>
-                      <label for="select-theme"><HiSelector className="absolute text-lg bottom-3 right-4 pointer-events-none" /></label>
+                      <label htmlFor="select-theme"><HiSelector className="absolute text-lg bottom-3 right-4 pointer-events-none" /></label>
                     </div>
                   </div>
                 </div>
