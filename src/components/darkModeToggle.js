@@ -15,6 +15,7 @@ export default class ToggleDarkMode extends Component {
       if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         this.setState({dark: true});
         localStorage.setItem('theme', "system");
+        root.classList.add("dark");
       } else {
         this.setState({dark: false});
         localStorage.setItem('theme', "system");
