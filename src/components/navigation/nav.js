@@ -2,9 +2,14 @@ import logo from '../../images/profile_pb.png'
 import NavMobile from './nav_mobile'
 import { Link, NavLink } from "react-router-dom";
 import { FiSettings } from 'react-icons/fi';
-import { IconContext } from "react-icons";
+import React, { useRef } from 'react'
+import { useDetectOutsideClick } from '../minor/detectOutsideClick';
 
 export default function Nav(props) {
+  const dropdownRef = useRef(null);
+  const [isActive, setIsActive] = useDetectOutsideClick(dropdownRef, false);
+  /*const [showMe, setShowMe] = useState(false);*/
+  const onClick = () => setIsActive(!isActive)
 
   return (
     <>
@@ -17,19 +22,17 @@ export default function Nav(props) {
                 <p className="font-medium">Sebastian Livoni</p>
               </Link>
             </div>
-            <div className="hidden md:flex items-center font-light">
+            <div className="hidden md:flex items-center font-light relative">
               <NavLink exact to='/' className="mr-3 text-transparent bg-clip-text bg-gradient-to-br from-black to-black dark:from-white dark:to-white dark:hover:from-pink-400 dark:hover:to-red-600" activeClassName="dark:from-white dark:to-white dark:from-pink-400 dark:to-red-600 font-bold dark:font-normal">Home</NavLink>
               <NavLink to="/about" className="mr-3 text-transparent bg-clip-text bg-gradient-to-br from-black to-black dark:from-white dark:to-white dark:hover:from-pink-400 dark:hover:to-red-600" activeClassName="dark:from-white dark:to-white dark:from-pink-400 dark:to-red-600 font-bold dark:font-normal">About</NavLink>
               <NavLink to="/contact" className="pr-3 text-transparent bg-clip-text bg-gradient-to-br from-black to-black dark:from-white dark:to-white dark:hover:from-pink-400 dark:hover:to-red-600" activeClassName="dark:from-white dark:to-white dark:from-pink-400 dark:to-red-600 font-bold dark:font-normal">Contact</NavLink>
               <NavLink to="/work" className="mr-3 px-3.5 py-2 bg-black rounded text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200">View Work</NavLink>
-              <IconContext.Provider value={{ size: "1.2em" }}>
-                <a href="#" rel="noreferrer" className="mr-6"><FiSettings /></a>
-                {/*<select>
-                  <option value="system">System</option>
-                  <option value="dark">Dark</option>
-                  <option value="light">Light</option>
-                </select>*/}
-              </IconContext.Provider>
+              <a href="#" rel="noreferrer" className="text-lg" onClick={onClick}><FiSettings /></a>
+              <div ref={dropdownRef} className={isActive ? "block absolute right-0 top-14 py-2 w-48 bg-white rounded-md shadow-xl z-20" : "hidden absolute right-0 top-14 py-2 w-48 bg-white rounded-md shadow-xl z-20"}>
+                <h1>Hej</h1>
+                <h1>Hej</h1>
+                <h1>Hej</h1>
+              </div>
             </div>
             {/*<div className="flex items-center cursor-pointer md:fixed md:bottom-10 md:left-10 z-30">
               <ToggleDarkMode />

@@ -34,6 +34,8 @@ module.exports = {
     extend: {
       fontWeight: ['hover', 'dark'],
       blur: ['hover', 'focus'],
+      rotate: ['active', 'group-hover'],
+      display: ['hover', 'focus', 'group-hover'],
     },
   },
   plugins: [],
