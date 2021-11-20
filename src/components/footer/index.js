@@ -15,7 +15,6 @@ export default function Footer() {
             </div>
             <div className="flex items-center space-x-1 font-medium">
               <div className="hidden md:block">
-                <a href="https://open.spotify.com/user/livonskien?si=997ed70f23904b7a" target="_blank" rel="noreferrer" className="mr-3 text-transparent bg-clip-text bg-gradient-to-br from-black to-black dark:from-white dark:to-white dark:hover:from-pink-400 dark:hover:to-red-600">Spotify</a>
                 <a href="https://github.com/sebastianlivoni" target="_blank" rel="noreferrer" className="mr-3 text-transparent bg-clip-text bg-gradient-to-br from-black to-black dark:from-white dark:to-white dark:hover:from-pink-400 dark:hover:to-red-600">GitHub</a>
                 <a href="https://www.freecodecamp.org/livoni" target="_blank" rel="noreferrer" className="pr-3 text-transparent bg-clip-text bg-gradient-to-br from-black to-black dark:from-white dark:to-white dark:hover:from-pink-400 dark:hover:to-red-600">freeCodeCamp</a>
                 <a href="https://www.linkedin.com/in/livoni/" target="_blank" rel="noreferrer" className="pr-3 text-transparent bg-clip-text bg-gradient-to-br from-black to-black dark:from-white dark:to-white dark:hover:from-pink-400 dark:hover:to-red-600">LinkedIn</a>
