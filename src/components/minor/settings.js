@@ -32,6 +32,7 @@ class ThemeSelect extends Component {
 
     this.handleChange = this.handleChange.bind(this);
   }
+  
   handleChange(e) {
     localStorage.setItem('theme', e.target.value);
     this.setState({ theme: e.target.value });
@@ -54,7 +55,7 @@ class ThemeSelect extends Component {
         <label htmlFor="select-theme">
           {(this.state.theme === "system") ? <HiOutlineDesktopComputer className="absolute text-lg bottom-3 left-4 pointer-events-none" /> :
           (this.state.theme === "dark") ? <BsMoon className="absolute text-lg bottom-3 left-4 pointer-events-none" /> :
-          <BsSun className="fixed text-lg bottom-3 left-4 pointer-events-none" />}
+          <BsSun className="absolute text-lg bottom-3 left-4 pointer-events-none" />}
         </label>
         <select className="appearance-none bg-transparent relative w-32 pl-9 py-1.5 border border-gray-600 dark:border-custom-light-gray rounded outline-none" id="select-theme" value={this.state.theme} onChange={this.handleChange}>
           {theme_options.map((option) => (
