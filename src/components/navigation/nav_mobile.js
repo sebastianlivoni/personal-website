@@ -3,6 +3,7 @@ import { MdEmail } from 'react-icons/md'
 import { FaTwitterSquare } from 'react-icons/fa'
 import React, { useState } from 'react'
 import { NavLink } from "react-router-dom";
+import Settings from '../minor/settings';
 
 export default function NavMobile() {
 
@@ -35,6 +36,9 @@ export default function NavMobile() {
           </svg>
           <p>Quick Menu</p>
         </div>
+      </div>
+      <div className="fixed md:hidden right-10 top-8 z-40">
+        <Settings />
       </div>
       <div className="overflow-hidden">
         <div className={showMe ? "max-h-100 md:hidden nav-mobile fixed bottom-0 bg-white dark:bg-custom-dark-black dark:text-white w-full rounded-t-3xl shadow-2xl z-50" : "max-h-0 md:hidden nav-mobile fixed bottom-0 bg-white dark:bg-custom-dark-black dark:text-white w-full rounded-t-3xl shadow-2xl z-50"}>
