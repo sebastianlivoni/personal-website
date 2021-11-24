@@ -73,7 +73,7 @@ export default function Settings() {
   const onClick = () => setIsActive(!isActive);
   return (
     <>
-      <FiSettings className="text-lg cursor-pointer text-black dark:text-white" onClick={onClick} />
+      <FiSettings className="text-lg cursor-pointer text-black dark:text-white transform transition-all hover:rotate-45" onClick={onClick} />
       <div ref={dropdownRef} className={isActive ? "grid absolute right-0 top-8 md:top-14 bg-white rounded-md shadow-xl z-20 divide-y divide-gray-600 dark:divide-custom-light-gray border border-transparent dark:border-custom-light-gray dark:bg-custom-dark-blue" : "hidden"}>
         <div className="flex space-x-4 items-center text-center py-3 px-4 text-black dark:text-white">
           <div className="flex-1">
