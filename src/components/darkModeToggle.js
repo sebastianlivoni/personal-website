@@ -9,31 +9,40 @@ export default class ToggleDarkMode extends Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  componentDidMount() {
+  setTheme(theme) {
     const root = document.getElementById('root');
-    if (!localStorage.getItem('theme')) {
-      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        this.setState({dark: true});
-        localStorage.setItem('theme', "system");
-        root.classList.add("dark");
-      } else {
-        this.setState({dark: false});
-        localStorage.setItem('theme', "system");
-      }
-      console.log("Intet tema endnu!");
-    } else if (localStorage.getItem('theme') === "dark") {
-      this.setState({dark: true});
-      root.classList.add("dark");
-    } else if (localStorage.getItem('theme') === "light") {
-      this.setState({dark: false});
-      root.classList.remove("dark");
-    } else if (localStorage.getItem('theme') === "system") {
-      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    switch (theme) {
+      case "dark":
         this.setState({dark: true});
         root.classList.add("dark");
-      } else {
+        break;
+      case "light":
         this.setState({dark: false});
         root.classList.remove("dark");
+        break;
+      default:
+        this.setState({dark: false});
+    }
+  }
+
+  componentDidMount() {
+    if (!localStorage.getItem('theme')) {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        this.setTheme("dark");
+        localStorage.setItem('theme', "system");
+      } else {
+        this.setTheme("light");
+        localStorage.setItem('theme', "system");
+      }
+    } else if (localStorage.getItem('theme') === "dark") {
+      this.setTheme("dark");
+    } else if (localStorage.getItem('theme') === "light") {
+      this.setTheme("light");
+    } else if (localStorage.getItem('theme') === "system") {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        this.setTheme("dark");
+      } else {
+        this.setTheme("light");
       }
     }
 
