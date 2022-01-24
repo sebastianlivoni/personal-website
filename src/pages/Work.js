@@ -1,5 +1,5 @@
 import Footer from '../components/footer';
-import Nav from '../components/navigation/nav';
+import Nav from '../components/navigation/nav.jsx';
 
 export default function WorkPage() {
   return (

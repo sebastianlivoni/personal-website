@@ -1,4 +1,4 @@
-import Nav from './components/navigation/nav';
+import Nav from './components/navigation/nav.jsx';
 import colorful from './images/colorful.png'
 import Contact from './components/contact';
 import Footer from './components/footer';

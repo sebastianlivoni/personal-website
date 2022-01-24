@@ -1,6 +1,6 @@
 import Footer from '../components/footer';
 import Contact from '../components/contact';
-import Nav from '../components/navigation/nav';
+import Nav from '../components/navigation/nav.jsx';
 import TimeLine from '../components/timeline/index.jsx';
 import AboutMe from '../components/about';
 import Skills from '../components/skills';

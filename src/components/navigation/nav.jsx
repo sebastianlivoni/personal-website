@@ -20,7 +20,7 @@ export default function Nav(props) {
               <NavLink exact to='/' className="mr-3 text-transparent bg-clip-text bg-gradient-to-br from-black to-black dark:from-white dark:to-white dark:hover:from-pink-400 dark:hover:to-red-600" activeClassName="dark:from-white dark:to-white dark:from-pink-400 dark:to-red-600 font-bold dark:font-normal">Home</NavLink>
               <NavLink to="/about" className="mr-3 text-transparent bg-clip-text bg-gradient-to-br from-black to-black dark:from-white dark:to-white dark:hover:from-pink-400 dark:hover:to-red-600" activeClassName="dark:from-white dark:to-white dark:from-pink-400 dark:to-red-600 font-bold dark:font-normal">About</NavLink>
               <NavLink to="/contact" className="pr-3 text-transparent bg-clip-text bg-gradient-to-br from-black to-black dark:from-white dark:to-white dark:hover:from-pink-400 dark:hover:to-red-600" activeClassName="dark:from-white dark:to-white dark:from-pink-400 dark:to-red-600 font-bold dark:font-normal">Contact</NavLink>
-              <NavLink to="/work" className="mr-3 px-3.5 py-2 bg-black rounded text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200">View Work</NavLink>
+              <NavLink to="/work" className="mr-3 px-3.5 py-2 bg-gradient-to-r from-black to-black dark:from-white dark:to-white rounded text-white hover:bg-gray-800 dark:from-white dark:to-white dark:text-black dark:hover:bg-gray-200" activeClassName="dark:from-pink-400 dark:to-red-600 dark:text-white">View Work</NavLink>
               <Settings />
             </div>
             <div className="flex items-center cursor-pointer md:fixed md:bottom-10 md:left-10 z-30">
