@@ -41,6 +41,7 @@ export default function Contact() {
       })
       .catch((err) => {
         console.log('FAILED...', err);
+        setMessage("Hi. Thanks for trying to reach out to me. I have currently disabled this form, but you can contact me on: contactme@livoni.me.")
       });
   };
 
