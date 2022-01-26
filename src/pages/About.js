@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import Footer from '../components/footer';
 import Contact from '../components/contact';
 import Nav from '../components/navigation/nav.jsx';
@@ -54,6 +55,12 @@ const experience = [
 ]
 
 export default function AboutPage() {
+
+  useEffect(() => {
+    // Update the document title using the browser API
+    document.title = "Livoni.me | About me";
+  });
+
   return (
     <>
       <div className="font-poppins bg-gray-200 dark:bg-custom-dark-blue transition pb-12 md:pb-0">

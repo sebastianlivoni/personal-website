@@ -1,7 +1,14 @@
+import React, { useState, useEffect } from 'react';
 import Footer from '../components/footer';
 import Nav from '../components/navigation/nav.jsx';
 
 export default function WorkPage() {
+
+  useEffect(() => {
+    // Update the document title using the browser API
+    document.title = "Livoni.me | My work";
+  });
+
   return (
     <>
       <div className="font-poppins bg-gray-200 dark:bg-custom-dark-blue transition pb-12 md:pb-0 min-h-screen">
