@@ -1,9 +1,16 @@
+import React, { useState, useEffect } from 'react';
 import Nav from './components/navigation/nav.jsx';
 import colorful from './images/colorful.png'
 import Contact from './components/contact';
 import Footer from './components/footer';
 
 function App() {
+
+  useEffect(() => {
+    // Update the document title using the browser API
+    document.title = "Sebastian Livoni | Website Portfolio";
+  });
+
   return (
     <>
       <div className="transition ease-in-out duration-300 font-poppins bg-gray-200 dark:bg-custom-dark-blue pb-12 md:pb-0">
