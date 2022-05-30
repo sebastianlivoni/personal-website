@@ -42,15 +42,15 @@ const experience = [
   },
   {
     title: "Pakke.dk",
-    desc: "I'm currently working as a Warehouse Employee and Software Developer at Pakke.dk",
+    desc: "I was working as a a Customer Service and Warehouse Employee at Pakke.dk. I have also made smaller software solutions for Pakke.dk",
     year_from: "2019",
-    year_to: "now"
+    year_to: "2022"
   },
   {
     title: "Perlemust.dk",
     desc: "I'm currently also working as a Shopify Agent and Web Developer at Perlemust.dk. I am further developing the website with new information and designs.",
     year_from: "2020",
-    year_to: "now"
+    year_to: "2022"
   }
 ]
 

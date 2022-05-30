@@ -1,4 +1,4 @@
-const skills = ["React", "Tailwind CSS", "Shopify", "Bootstrap", "C", "Overleaf", "Git"]
+const skills = ["JavaScript", "React", "Tailwind CSS", "Shopify", "Bootstrap", "C", "Git"]
 
 export default function Skills() {
   return (
