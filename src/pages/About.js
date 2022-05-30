@@ -9,7 +9,7 @@ import Skills from '../components/skills';
 const timelinesitems = [
   {
     title: "Computer Science at Aalborg University",
-    desc: "Programming is my biggest passion and I really want to work with what I love. Therefore I applied to Computer Science at Aalborg University. I was admitted in September 2021 and therefore I am currently studying computer science.",
+    desc: "Programming is my biggest passion and I really want to work with what I love. Therefore I applied to Computer Science at Aalborg University. I was admitted in September 2021 and therefore I am currently studying computer science finishing the 2nd semester this spring.",
     year_from: "2021",
     year_to: "2026"
   },
