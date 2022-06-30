@@ -56,9 +56,10 @@ export default function NavMobile() {
             </div>
             <div>
               <div className="my-8 mx-8 font-bold text-xl overflow-x-auto">
-                <div className="flex justify-center">
+                <div className="flex justify-center overflow-scroll">
                   <NavLink to="/" className="mx-4">Home</NavLink>
                   <NavLink to="/about" className="mx-4">About</NavLink>
+                  <NavLink to="/blog" className="mx-4">Blog</NavLink>
                   <NavLink to="/contact" className="mx-4" onClick={Toggle}>Contact</NavLink>
                   {/*<a href="/" className="mx-4">Blog</a>*/}
                 </div>

@@ -3,6 +3,8 @@ import Footer from '../components/footer';
 import Contact from '../components/contact';
 import Nav from '../components/navigation/nav.jsx';
 import AboutMe from '../components/about';
+import Post from '../posts/first-post'
+
 
 export default function Blog() {
 
@@ -16,7 +18,8 @@ export default function Blog() {
         <Nav sticky={false} />
         <div className="max-w-6xl mx-auto tracking-wide pb-5">
           <div className="mx-8">
-            <AboutMe />
+            <h1 className="text-center text-4xl font-bold dark:text-white my-20">Blog Posts!</h1>
+            <p className="text-center mb-10">There is no posts yet! Take a look again in the near future.</p>
           </div>
         </div>
         <Contact />
