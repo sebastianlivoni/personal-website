@@ -2,9 +2,6 @@ import React, { useEffect } from 'react';
 import Footer from '../components/footer';
 import Contact from '../components/contact';
 import Nav from '../components/navigation/nav.jsx';
-import AboutMe from '../components/about';
-import Post from '../posts/first-post'
-
 
 export default function Blog() {
 
