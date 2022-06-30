@@ -7,6 +7,7 @@ import AboutPage from './pages/About';
 import ScrollToTop from './components/scrollTop';
 import WorkPage from './pages/Work';
 import ContactPage from './pages/Contact';
+import Blog from './pages/Blog'
 import {
   BrowserRouter as Router,
   Switch,
@@ -28,6 +29,10 @@ ReactDOM.render(
         <Route path="/contact">
           <ScrollToTop />
           <ContactPage />
+        </Route>
+        <Route path="/blog">
+          <ScrollToTop />
+          <Blog />
         </Route>
         <Route path="/">
           <ScrollToTop />

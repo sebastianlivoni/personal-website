@@ -1,4 +1,3 @@
-import PB from '../../images/PB_face.jpeg';
 import secPB from '../../images/foto.jpeg';
 
 export default function AboutMe() {

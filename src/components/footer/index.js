@@ -2,6 +2,25 @@ import { FaGithub, FaFreeCodeCamp, FaLinkedin, FaSpotify } from 'react-icons/fa'
 import logo from '../../images/profile_pb.png'
 import { NavLink } from "react-router-dom";
 
+const footerItems = [
+  {
+    name: "Home",
+    path: "/"
+  },
+  {
+    name: "About",
+    path: "/about"
+  },
+  {
+    name: "Blog",
+    path: "/blog"
+  },
+  {
+    name: "Contact",
+    path: "/contact"
+  }
+]
+
 export default function Footer() {
   return (
     <div className="mt-16 dark:text-white">
@@ -18,9 +37,10 @@ export default function Footer() {
                 <a href="https://github.com/sebastianlivoni" target="_blank" rel="noreferrer" className="mr-3 text-transparent bg-clip-text bg-gradient-to-br from-black to-black dark:from-white dark:to-white dark:hover:from-pink-400 dark:hover:to-red-600">GitHub</a>
                 <a href="https://www.freecodecamp.org/livoni" target="_blank" rel="noreferrer" className="pr-3 text-transparent bg-clip-text bg-gradient-to-br from-black to-black dark:from-white dark:to-white dark:hover:from-pink-400 dark:hover:to-red-600">freeCodeCamp</a>
                 <a href="https://www.linkedin.com/in/livoni/" target="_blank" rel="noreferrer" className="pr-3 text-transparent bg-clip-text bg-gradient-to-br from-black to-black dark:from-white dark:to-white dark:hover:from-pink-400 dark:hover:to-red-600">LinkedIn</a>
-                <NavLink exact to='/' className="mr-3 text-transparent bg-clip-text bg-gradient-to-br from-black to-black dark:from-white dark:to-white dark:hover:from-pink-400 dark:hover:to-red-600" activeClassName="dark:from-white dark:to-white dark:from-pink-400 dark:to-red-600 font-bold dark:font-medium">Home</NavLink>
-                <NavLink to="/about" className="pr-3 text-transparent bg-clip-text bg-gradient-to-br from-black to-black dark:from-white dark:to-white dark:hover:from-pink-400 dark:hover:to-red-600" activeClassName="dark:from-white dark:to-white dark:from-pink-400 dark:to-red-600 font-bold dark:font-medium">About</NavLink>
-                <NavLink to="/contact" className="text-transparent bg-clip-text bg-gradient-to-br from-black to-black dark:from-white dark:to-white dark:hover:from-pink-400 dark:hover:to-red-600" activeClassName="dark:from-white dark:to-white dark:from-pink-400 dark:to-red-600 font-bold dark:font-medium">Contact</NavLink>
+                
+                {footerItems.map(item => (
+                  <NavLink exact to={item.path} className="mr-3 text-transparent bg-clip-text bg-gradient-to-br from-black to-black dark:from-white dark:to-white dark:hover:from-pink-400 dark:hover:to-red-600" activeClassName="dark:from-white dark:to-white dark:from-pink-400 dark:to-red-600 font-bold dark:font-medium">{item.name}</NavLink>
+                ))}
               </div>
               <div className="md:hidden flex text-lg">
                 <a href="https://open.spotify.com/user/livonskien?si=997ed70f23904b7a" target="_blank" rel="noreferrer" className="mr-6 hover:text-gray-700 dark:hover:text-gray-300"><FaSpotify /></a>

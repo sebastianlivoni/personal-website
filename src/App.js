@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Nav from './components/navigation/nav.jsx';
 import colorful from './images/colorful.png'
 import Contact from './components/contact';
