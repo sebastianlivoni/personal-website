@@ -16,7 +16,7 @@ export default function Blog() {
         <div className="max-w-6xl mx-auto tracking-wide pb-5">
           <div className="mx-8">
             <h1 className="text-center text-4xl font-bold dark:text-white my-20">Blog Posts!</h1>
-            <p className="text-center mb-10">There is no posts yet! Take a look again in the near future.</p>
+            <p className="text-center mb-10 dark:text-white">There is no posts yet! Take a look again in the near future.</p>
           </div>
         </div>
         <Contact />
