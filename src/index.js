@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import 'animate.css';
+import App from './App.jsx';
 import reportWebVitals from './reportWebVitals';
 import AboutPage from './pages/About';
 import ScrollToTop from './components/scrollTop';

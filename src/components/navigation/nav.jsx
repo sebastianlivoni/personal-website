@@ -26,7 +26,7 @@ const navItems = [
 export default function Nav(props) {
   return (
     <>
-      <nav className={props.sticky === true ? "sticky top-0 inset-x-0 text-black text-sm dark:text-white z-40 tracking-wide" : "top-0 inset-x-0 text-black text-sm dark:text-white z-40 tracking-wide"}>
+      <nav className={props.sticky === true ? "sticky top-0 inset-x-0 text-black text-sm dark:text-white z-40 tracking-wide" : "top-0 inset-x-0 text-black text-sm dark:text-white z-40 tracking-wide "}>
         <div className="max-w-6xl mx-auto px-8 py-1">
           <div className="flex justify-between my-2 md:my-0">
             <div className="flex space-x-4">
