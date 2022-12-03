@@ -1,13 +1,20 @@
-import { useEffect } from "react"
 import Layout from "../components/layout"
-import { updateTheme } from "../lib/updateTheme"
 import "../styles/globals.css"
 import Head from "next/head"
+import useDarkMode, { DarkModeProvider } from "../lib/useDarkMode"
 
-function MyApp({ Component, pageProps }) {
-	useEffect(() => {
-		updateTheme()
-	})
+const MyApp = ({ Component, pageProps }) => {
+	return (
+		<DarkModeProvider>
+			<Container>
+				<Component {...pageProps} />
+			</Container>
+		</DarkModeProvider>
+	)
+}
+
+function Container({ children }) {
+	const { theme } = useDarkMode()
 
 	return (
 		<Layout>
@@ -33,12 +40,21 @@ function MyApp({ Component, pageProps }) {
 				<link
 					rel="mask-icon"
 					href="/safari-pinned-tab.svg"
-					color="#5bbad5"
+					color="#0000FF"
 				/>
-				<meta name="msapplication-TileColor" content="#da532c" />
-				<meta name="theme-color" content="#ffffff" />
+				<meta
+					name="theme-color"
+					content={
+						(theme == "system" &&
+							window.matchMedia("(prefers-color-scheme: dark)")
+								.matches) ||
+						theme == "dark"
+							? "#161616"
+							: "#E5E7EB"
+					}
+				/>
 			</Head>
-			<Component {...pageProps} />
+			{children}
 		</Layout>
 	)
 }
