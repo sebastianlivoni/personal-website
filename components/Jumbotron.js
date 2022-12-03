@@ -19,10 +19,11 @@ export default function Jumbotron() {
 						Hi there!
 					</h1>
 					<h5 className="text-md sm:text-xl font-light text-gray-700 dark:text-white">
-						I&apos;m Sebastian, a {greogorianAge()} year old
-						upcoming full stack developer with a deep desire to
-						develop in JavaScript and Swift. Explore this page to
-						learn more about my journey.
+						I&apos;m Sebastian, a{" "}
+						{greogorianAge("September 24, 2001")} year old upcoming
+						full stack developer with a deep desire to develop in
+						JavaScript and Swift. Explore this page to learn more
+						about my journey.
 					</h5>
 				</div>
 			</div>

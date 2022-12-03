@@ -1,10 +1,11 @@
-export default function greogorianAge() {
-  const birthDateTime = new Date("September 24, 2001")
-  const currentTime = new Date()
-
-  let dayDifference = currentTime.getDate() - birthDateTime.getDate()
-  let monthDifference = currentTime.getMonth() - birthDateTime.getMonth()
-  let yearDifference = currentTime.getFullYear() - birthDateTime.getFullYear()
-
-  return yearDifference - (monthDifference < 0 || dayDifference < 0 ? 1 : 0)
+// https://stackoverflow.com/questions/4060004/calculate-age-given-the-birth-date-in-the-format-yyyymmdd
+export default function greogorianAge(date) {
+	var today = new Date()
+	var birthDate = new Date(date)
+	var age = today.getFullYear() - birthDate.getFullYear()
+	var m = today.getMonth() - birthDate.getMonth()
+	if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+		age--
+	}
+	return age
 }
