@@ -1,4 +1,4 @@
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { FiSettings } from "react-icons/fi"
 import { BsSun, BsMoon } from "react-icons/bs"
 import { HiOutlineDesktopComputer, HiSelector } from "react-icons/hi"
@@ -53,18 +53,36 @@ function ThemeSelector() {
 	)
 }
 
+function useOutsideClick(ref, isActive, setIsActive) {
+	useEffect(() => {
+		function handleClickOutside(e) {
+			if (!ref.current.contains(e.target) && isActive) {
+				setIsActive(false)
+			}
+		}
+
+		document.addEventListener("mousedown", handleClickOutside)
+
+		return () => {
+			document.removeEventListener("mousedown", handleClickOutside)
+		}
+	}, [isActive])
+}
+
 export default function Settings() {
 	const dropdownRef = useRef(null)
 	const [isActive, setIsActive] = useState(false)
 	const onClick = () => setIsActive(!isActive)
+
+	useOutsideClick(dropdownRef, isActive, setIsActive)
+
 	return (
-		<>
+		<div ref={dropdownRef}>
 			<FiSettings
 				className="text-lg cursor-pointer text-black dark:text-white transform transition-all hover:rotate-45"
 				onClick={onClick}
 			/>
 			<div
-				ref={dropdownRef}
 				className={
 					isActive
 						? "grid absolute right-0 top-8 md:top-14 bg-white rounded-md shadow-xl z-20 divide-y divide-gray-600 dark:divide-custom-light-gray border border-transparent dark:border-custom-light-gray dark:bg-custom-dark-blue"
@@ -88,6 +106,6 @@ export default function Settings() {
 					</div>
 				</div>
 			</div>
-		</>
+		</div>
 	)
 }
