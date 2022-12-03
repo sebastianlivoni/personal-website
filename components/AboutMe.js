@@ -1,6 +1,9 @@
 export default function AboutMe() {
 	return (
-		<section className="lg:flex rounded-xl p-8 md:p-0 my-36" id="about-me">
+		<section
+			className="flex justify-center items-center h-screen min-h-fit tracking-wide"
+			id="about-me"
+		>
 			<img
 				className="mx-auto rounded-xl"
 				src="./foto.jpeg"
@@ -8,7 +11,7 @@ export default function AboutMe() {
 				width="384"
 				height="300"
 			/>
-			<div className="pt-6 md:p-12 text-center md:text-left space-y-4 dark:text-white">
+			<div className="pt-6 md:p-12 text-center md:text-left space-y-4 dark:text-white min-h1">
 				<h1 className="text-5xl dark:text-white font-bold">
 					Hi there, I&apos;m Sebastian!
 				</h1>
