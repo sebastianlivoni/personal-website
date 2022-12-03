@@ -5,7 +5,7 @@ import greogorianAge from "../utils/greogorianAge"
 export default function Jumbotron() {
 	return (
 		<section id="jumbotron">
-			<div className="flex justify-center items-center h-screen tracking-wide">
+			<div className="flex justify-center items-center h-screen min-h-fit tracking-wide">
 				<div className="absolute mx-auto z-1 pointer-events-none">
 					<Image
 						src="/colorful_bg.png"
@@ -14,7 +14,7 @@ export default function Jumbotron() {
 						width={700}
 					/>
 				</div>
-				<div className="max-w-sm sm:max-w-xl mx-12 z-30">
+				<div className="max-w-sm sm:max-w-xl mx-12 my-40 z-30">
 					<h1 className="text-7xl sm:text-8xl md:text-9xl font-medium mb-3 dark:text-white">
 						Hi there!
 					</h1>
