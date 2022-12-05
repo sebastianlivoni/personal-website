@@ -13,6 +13,8 @@
 # production
 /build
 
+/out
+
 .next
 
 # misc

@@ -40,8 +40,9 @@ function Container({ children }) {
 				<link
 					rel="mask-icon"
 					href="/safari-pinned-tab.svg"
-					color="#0000FF"
+					color="#1f1b4e"
 				/>
+				<meta name="msapplication-TileColor" content="#da532c" />
 				<meta
 					name="theme-color"
 					content={
