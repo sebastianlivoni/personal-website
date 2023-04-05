@@ -1,4 +1,4 @@
-export default function TimeLine(props) {
+export default function TimeLine(props: any) {
   return (
     <section className="container mx-auto w-full h-full dark:text-white" id="timeline">
       <div className="relative wrap overflow-hidden pt-8 h-full">
@@ -8,7 +8,7 @@ export default function TimeLine(props) {
           style={{ left: "50%" }}
         ></div>
 
-        {props.items.map((item, i) => (
+        {props.items.map((item: any, i: number) => (
           <div
             key={i}
             className={

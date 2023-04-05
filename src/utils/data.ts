@@ -1,6 +1,15 @@
 import { FaGithub, FaFreeCodeCamp, FaCodepen, FaSpotify } from "react-icons/fa"
 
-export const navLinks = [
+export interface NavLinksProps {
+  name: string,
+  path: string,
+  social?: boolean,
+  icon?: any,
+  onlyShowIcon?: boolean,
+  isButton?: boolean
+}
+
+export const navLinks: NavLinksProps[] = [
   { name: "Home", path: "/" },
   {
     name: "About",

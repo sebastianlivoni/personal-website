@@ -3,7 +3,7 @@ import { useState } from "react"
 export default function ContactForm() {
   const [isSending, setIsSending] = useState(false)
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: any) => {
     if (isSending) return
 
     event.preventDefault()
@@ -88,10 +88,7 @@ export default function ContactForm() {
                 name="message"
                 className="appearance-none block w-full bg-gray-200 dark:bg-custom-dark-black dark:border-transparent text-gray-700 dark:text-custom-light-gray dark:placeholder-custom-light-gray rounded py-3 px-4 leading-tight focus:outline-none"
                 id="grid-message"
-                type="text"
-                rows="5"
                 placeholder="Enter your message"
-                minLength="50"
                 required
               ></textarea>
             </div>

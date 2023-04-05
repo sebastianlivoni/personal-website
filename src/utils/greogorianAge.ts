@@ -1,5 +1,5 @@
 // https://stackoverflow.com/questions/4060004/calculate-age-given-the-birth-date-in-the-format-yyyymmdd
-export default function greogorianAge(date) {
+export default function greogorianAge(date: string) {
 	var today = new Date()
 	var birthDate = new Date(date)
 	var age = today.getFullYear() - birthDate.getFullYear()
