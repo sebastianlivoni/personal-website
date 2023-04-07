@@ -18,7 +18,7 @@ export default function Navbar() {
 							<p className="font-medium">Sebastian Livoni</p>
 						</a>
 					</div>
-					<div className="hidden md:flex items-center font-light relative">
+					<div className="hidden space-x-3 md:flex items-center font-light relative">
 						{navLinks.map((item, i) => (
 							<NavItem item={item} footer={false} key={i} />
 						))}

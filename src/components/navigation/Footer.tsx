@@ -17,29 +17,27 @@ export default function Footer() {
                 />
               </div>
             </div>
-            <div className="space-x-1 font-medium">
-              <div className="hidden md:flex">
-                {footerLinks.map((item, i) => (
-                  <NavItem key={i} footer={true} item={item} />
-                ))}
-              </div>
-              <div className="md:hidden flex text-lg">
-                {footerLinks.map((item, i) =>
-                  item.social || item.onlyShowIcon ? (
-                    <a
-                      key={i}
-                      href={item.path}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="mr-6 hover:text-gray-700 dark:hover:text-gray-300"
-                    >
-                      {item.icon}
-                    </a>
-                  ) : (
-                    ""
-                  )
-                )}
-              </div>
+            <div className="hidden md:flex space-x-3">
+              {footerLinks.map((item, i) => (
+                <NavItem key={i} footer={true} item={item} />
+              ))}
+            </div>
+            <div className="md:hidden flex text-lg">
+              {footerLinks.map((item, i) =>
+                item.social || item.onlyShowIcon ? (
+                  <a
+                    key={i}
+                    href={item.path}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mr-6 hover:text-gray-700 dark:hover:text-gray-300"
+                  >
+                    {item.icon}
+                  </a>
+                ) : (
+                  ""
+                )
+              )}
             </div>
           </div>
         </div>

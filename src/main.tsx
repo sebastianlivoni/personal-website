@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import "./index.css";
+import "./css/global.css";
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import Navbar from "./components/navigation/Navbar";
 import Footer from "./components/navigation/Footer";

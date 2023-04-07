@@ -1,0 +1,4 @@
+/* Fix for correct webkit autofill button on dark mode */
+.dark input:not(input:-webkit-autofill)::-webkit-contacts-auto-fill-button {
+    background-color: #fff;
+}
